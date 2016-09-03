@@ -1,0 +1,17 @@
+def rubulator(input)
+	x = input[0][0].to_i
+	y = input[0][2].to_i
+	mode = input[0][1]
+	case mode
+	when '+'
+		puts x + y
+	when '-'
+		puts x - y
+	when '*'
+		puts x*y
+	when '/'
+		puts x/y
+	end
+end
+
+rubulator(ARGV)

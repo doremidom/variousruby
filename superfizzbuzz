@@ -1,0 +1,18 @@
+1000.downto(0) do |x|
+	response = []
+	if x % 7 == 0
+		response.push("Super")
+	end
+	if x % 3 == 0
+		response.push("Fizz")
+	end
+	if x % 5 == 0
+		response.push("Buzz")
+	end
+	
+	if response.empty?
+		puts x
+	else
+		puts response.join('')
+	end
+end

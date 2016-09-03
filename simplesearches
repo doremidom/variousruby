@@ -1,0 +1,30 @@
+def find(array, x)
+	found = false
+	marker = 0
+	while marker <= array.length
+		if array[marker] == x
+			found = true
+			return "found #{x} at index #{marker}"
+		else
+			marker += 1
+		end
+	end
+end
+
+find(values, 1)
+
+def bisect(array, x)
+	m = array[(array.length/2)]
+	return puts "found #{x}" if x == m
+	if array.empty? || x < array[0] || x > array[-1]
+		return puts "#{x} not found"
+	elsif x < m
+		bisect(array[0..((array.length/2)-1)], x)
+	elsif
+		x > m
+		bisect(array[((array.length/2)+1)..-1], x)
+	end
+	puts array.inspect
+end
+
+bisect(values, 10001)
